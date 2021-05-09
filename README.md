@@ -4,8 +4,8 @@
 
 ### How to run this project
 
-- First: clone the repo `git clone git@github.com:ammarkandel/Book-Store-CMS.git` and open the folder `cd simple-calculator-js`.
-- Make sure you have npm installed localy then run `npm install` and `npm start`.
+- First: clone the repo `git clone git@github.com:ammarkandel/Book-Store-CMS.git` and open the folder `cd Book-Store-CMS`.
+- Make sure you have yarn installed localy then run `yarn` and `npm start`.
 
 ### Author
 
