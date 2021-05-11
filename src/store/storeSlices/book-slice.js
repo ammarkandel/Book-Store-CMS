@@ -4,6 +4,7 @@ const bookSlice = createSlice({
   name: 'bookSlice',
   initialState: {
     books: [],
+    filterBooks: [],
   },
   reducers: {
     createBook(state, action) {
@@ -17,6 +18,11 @@ const bookSlice = createSlice({
     removeBook(state, action) {
       const id = action.payload;
       state.books = state.books.filter((item) => item.id !== id);
+    },
+    changeFilter(state, action) {
+      const category = action.payload;
+      const filterCategory = state.books.filter((item) => item.category === category);
+      state.filterBooks = filterCategory;
     },
   },
 });

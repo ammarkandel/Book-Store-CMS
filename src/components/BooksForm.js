@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import classes from './BooksForm.module.css';
 import { bookSliceActions } from '../store/storeSlices/book-slice';
 
-const categroy = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+export const categroy = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const BooksForm = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const BooksForm = () => {
           Categroy :
           <select className={classes.inputs} name="category">
             {categroy.map((item) => (
-              <option key={Math.random()} value={item.toLowerCase()}>
+              <option key={Math.random()} value={item}>
                 {item}
               </option>
             ))}
