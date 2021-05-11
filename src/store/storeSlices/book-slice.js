@@ -16,10 +16,7 @@ const bookSlice = createSlice({
     },
     removeBook(state, action) {
       const id = action.payload;
-      const existingItem = state.books.find((item) => item.id === id);
-      if (existingItem.length === 1) {
-        state.books = state.books.filter((item) => item.id !== id);
-      }
+      state.books = state.books.filter((item) => item.id !== id);
     },
   },
 });
