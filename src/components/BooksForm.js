@@ -25,7 +25,11 @@ const BooksForm = () => {
         <label htmlFor="category">
           Categroy :
           <select className={classes.inputs} name="category">
-            {categroy.map((item) => <option key={Math.random()} value={item.toLowerCase()}>{item}</option>)}
+            {categroy.map((item) => (
+              <option key={Math.random()} value={item.toLowerCase()}>
+                {item}
+              </option>
+            ))}
           </select>
         </label>
         <button type="submit" className={classes.submit_btn}>Submit</button>
