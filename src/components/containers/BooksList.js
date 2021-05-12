@@ -1,6 +1,6 @@
 // import classes from './BooksList.module.css';
 import { useSelector } from 'react-redux';
-import Book from './Book';
+import Book from '../Book';
 
 const BooksList = () => {
   const filter = useSelector((state) => state.book.filter);
@@ -14,13 +14,9 @@ const BooksList = () => {
 
   return (
     <>
-      <table>
-        <tbody>
-          <tr>
-            <Book bookInfo={booksData} />
-          </tr>
-        </tbody>
-      </table>
+      {booksData.map((item) => (
+        <Book key={item.id} title={item.title} id={item.id} category={item.category} />
+      ))}
     </>
   );
 };

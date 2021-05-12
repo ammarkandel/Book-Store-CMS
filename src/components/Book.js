@@ -1,32 +1,24 @@
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { bookSliceActions } from '../store/storeSlices/book-slice';
+import RemoveButton from './containers/RemoveButton';
 
 const Book = (props) => {
-  const { bookInfo } = props;
-  const dispatch = useDispatch();
-
-  const removeBookHandler = () => {
-    dispatch(bookSliceActions.removeBook(bookInfo[0].id));
-  };
+  const { id, category, title } = props;
 
   return (
     <>
-      {bookInfo.map((item) => (
-        <td key={item.id}>
-          Title:
-          {item.title}
-          || Categroy:
-          {item.category}
-          <button type="button" onClick={removeBookHandler}>remove book</button>
-        </td>
-      ))}
+      <div>
+        {category}
+        {title}
+        <RemoveButton id={id} />
+      </div>
     </>
   );
 };
 
 Book.propTypes = {
-  bookInfo: PropTypes.instanceOf(Array).isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Book;
