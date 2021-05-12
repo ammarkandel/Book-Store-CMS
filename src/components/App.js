@@ -5,8 +5,8 @@ import CategoryFilter from './CategoryFilter';
 
 const App = () => (
   <>
-    <CategoryFilter />
     <BooksForm />
+    <CategoryFilter />
     <BooksList />
   </>
 );

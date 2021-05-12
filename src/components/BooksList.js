@@ -13,13 +13,15 @@ const BooksList = () => {
   }
 
   return (
-    <table>
-      <tbody>
-        <tr>
-          <Book bookInfo={booksData} />
-        </tr>
-      </tbody>
-    </table>
+    <>
+      <table>
+        <tbody>
+          <tr>
+            <Book bookInfo={booksData} />
+          </tr>
+        </tbody>
+      </table>
+    </>
   );
 };
 
