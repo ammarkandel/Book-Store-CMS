@@ -5,6 +5,7 @@ const bookSlice = createSlice({
   initialState: {
     books: [],
     filterBooks: [],
+    filter: false,
   },
   reducers: {
     createBook(state, action) {
@@ -21,8 +22,12 @@ const bookSlice = createSlice({
     },
     changeFilter(state, action) {
       const category = action.payload;
-      const filterCategory = state.books.filter((item) => item.category === category);
-      state.filterBooks = filterCategory;
+      if (category === 'All') {
+        state.filter = false;
+      } else {
+        state.filter = true;
+      }
+      state.filterBooks = state.books.filter((item) => item.category === category);
     },
   },
 });
