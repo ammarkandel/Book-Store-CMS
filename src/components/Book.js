@@ -6,11 +6,12 @@ const Book = (props) => {
 
   return (
     <>
-      <div>
-        {category}
-        {title}
+      <tr>
+        <span>{category}</span>
+        <br />
+        <span>{title}</span>
         <RemoveButton id={id} />
-      </div>
+      </tr>
     </>
   );
 };

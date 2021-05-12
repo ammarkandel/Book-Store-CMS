@@ -14,9 +14,11 @@ const BooksList = () => {
 
   return (
     <>
-      {booksData.map((item) => (
-        <Book key={item.id} title={item.title} id={item.id} category={item.category} />
-      ))}
+      <table>
+        {booksData.map((item) => (
+          <Book key={item.id} title={item.title} id={item.id} category={item.category} />
+        ))}
+      </table>
     </>
   );
 };
