@@ -6,7 +6,7 @@
 
 - First: clone the repo `git clone git@github.com:ammarkandel/Book-Store-CMS.git` and open the folder `cd Book-Store-CMS`.
 - Second: Make sure you have yarn globally in your machine `yarn --version` if not run `npm install --global yarn`.
-- Third: Make sure you in the project path in the terminal then run `yarn` and `npm start`.
+- Third: Make sure you in the project path in the terminal then run `yarn install` or `npm install` and `npm start`.
 
 ### Author
 
