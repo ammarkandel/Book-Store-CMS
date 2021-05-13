@@ -1,10 +1,12 @@
 import './App.css';
-import BooksForm from './BooksForm';
-import BooksList from './BooksList';
+import BooksForm from '../containers/BooksForm';
+import BooksList from '../containers/BooksList';
+import CategoryFilter from '../containers/CategoryFilter';
 
 const App = () => (
   <>
     <BooksForm />
+    <CategoryFilter />
     <BooksList />
   </>
 );

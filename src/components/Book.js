@@ -1,24 +1,28 @@
 import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  const { bookInfo } = props;
+  const {
+    id, category, title, removeBook,
+  } = props;
 
   return (
     <>
-      {bookInfo.map((item) => (
-        <td key={Math.random()}>
-          Title:
-          {item.title}
-          || Categroy:
-          {item.category}
+      <tr>
+        <td>
+          {category}
+          {title}
+          <button type="button" onClick={() => removeBook(id)}>Remove</button>
         </td>
-      ))}
+      </tr>
     </>
   );
 };
 
 Book.propTypes = {
-  bookInfo: PropTypes.instanceOf(Array).isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 export default Book;

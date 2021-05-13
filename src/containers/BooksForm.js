@@ -2,17 +2,28 @@ import { useDispatch } from 'react-redux';
 import classes from './BooksForm.module.css';
 import { bookSliceActions } from '../store/storeSlices/book-slice';
 
-const categroy = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+export const categroy = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const BooksForm = () => {
   const dispatch = useDispatch();
+  const bookInfo = { id: Math.random(), title: '', category: 'Action' };
+
+  const titleChangeHandler = (event) => {
+    bookInfo.title = event.target.value;
+  };
+
+  const categoryChangeHandler = (event) => {
+    bookInfo.category = event.target.value;
+  };
 
   const submitBooksHandler = (event) => {
     event.preventDefault();
-    const title = event.target.title.value;
-    const category = event.target.category.value;
 
-    dispatch(bookSliceActions.createBook({ id: Math.random(), title, category }));
+    dispatch(bookSliceActions.createBook({
+      id: Math.random(),
+      title: bookInfo.title,
+      category: bookInfo.category,
+    }));
   };
 
   return (
@@ -20,13 +31,20 @@ const BooksForm = () => {
       <form className={classes.book_form} onSubmit={submitBooksHandler}>
         <label htmlFor="title">
           Title :
-          <input type="text" name="title" className={classes.inputs} />
+          <input
+            type="text"
+            onChange={titleChangeHandler}
+            className={classes.inputs}
+          />
         </label>
         <label htmlFor="category">
           Categroy :
-          <select className={classes.inputs} name="category">
+          <select
+            className={classes.inputs}
+            onChange={categoryChangeHandler}
+          >
             {categroy.map((item) => (
-              <option key={Math.random()} value={item.toLowerCase()}>
+              <option key={Math.random()} value={item}>
                 {item}
               </option>
             ))}
