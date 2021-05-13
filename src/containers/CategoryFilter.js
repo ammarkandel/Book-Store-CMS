@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { categroy } from './BooksForm';
-import { bookSliceActions } from '../../store/storeSlices/book-slice';
+import { bookSliceActions } from '../store/storeSlices/book-slice';
 
 const CategoryFilter = () => {
   const dispatch = useDispatch();

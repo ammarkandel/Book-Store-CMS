@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import classes from './BooksForm.module.css';
-import { bookSliceActions } from '../../store/storeSlices/book-slice';
+import { bookSliceActions } from '../store/storeSlices/book-slice';
 
 export const categroy = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
