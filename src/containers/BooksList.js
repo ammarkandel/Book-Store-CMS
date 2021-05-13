@@ -1,5 +1,3 @@
-/* eslint-disable */
-// import classes from './BooksList.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
 import { bookSliceActions } from '../store/storeSlices/book-slice';
@@ -24,7 +22,13 @@ const BooksList = () => {
       <table>
         <tbody>
           {booksData.map((item) => (
-            <Book key={item.id} title={item.title} id={item.id} category={item.category} removeBook={removeBookHandler} />
+            <Book
+              key={item.id}
+              title={item.title}
+              id={item.id}
+              category={item.category}
+              removeBook={removeBookHandler}
+            />
           ))}
         </tbody>
       </table>
