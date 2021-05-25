@@ -1,5 +1,3 @@
-/* eslint-disable */
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { bookSliceActions } from '../store/storeSlices/bookSlice';
 import { category } from '../containers/BooksForm';
@@ -10,7 +8,7 @@ const CategoryFilter = () => {
 
   const categoryChangeHandler = (event) => {
     dispatch(bookSliceActions.changeFilter(event.target.value));
-  }
+  };
 
   return (
     <select onChange={categoryChangeHandler}>

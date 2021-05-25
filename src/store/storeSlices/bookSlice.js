@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { createSlice } from '@reduxjs/toolkit';
 import booksActions from './actions/index';
 
@@ -10,7 +9,7 @@ const bookSlice = createSlice({
     filter: false,
     filterVal: 'All',
   },
-  reducers: booksActions()
+  reducers: booksActions(),
 });
 
 export const bookSliceActions = bookSlice.actions;

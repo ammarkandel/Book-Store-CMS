@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useDispatch } from 'react-redux';
 import classes from './BooksForm.module.css';
 import { bookSliceActions } from '../store/storeSlices/bookSlice';
@@ -46,10 +45,11 @@ const BooksForm = () => {
           >
             {category.map((item) => (
               item !== 'All'
-              &&
+              && (
               <option key={Math.random()} value={item}>
                 {item}
               </option>
+              )
             ))}
           </select>
         </label>
