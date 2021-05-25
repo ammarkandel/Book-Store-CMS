@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book';
-import { bookSliceActions } from '../store/storeSlices/book-slice';
+import { bookSliceActions } from '../store/storeSlices/bookSlice';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = () => {
   const filter = useSelector((state) => state.book.filter);
   let booksData;
-
-  if (filter === true) {
+  if (filter) {
     booksData = useSelector((state) => state.book.filterBooks);
   } else {
     booksData = useSelector((state) => state.book.books);
@@ -19,6 +19,7 @@ const BooksList = () => {
 
   return (
     <>
+      <CategoryFilter />
       <table>
         <tbody>
           {booksData.map((item) => (
