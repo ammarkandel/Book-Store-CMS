@@ -17,9 +17,13 @@ const BooksList = () => {
     dispatch(bookSliceActions.removeBook(id));
   };
 
+  const categoryChangeHandler = (val) => {
+    dispatch(bookSliceActions.changeFilter(val));
+  };
+
   return (
     <>
-      <CategoryFilter />
+      <CategoryFilter changeHandler={categoryChangeHandler} />
       <table>
         <tbody>
           {booksData.map((item) => (
