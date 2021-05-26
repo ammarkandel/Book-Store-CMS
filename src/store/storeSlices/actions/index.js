@@ -1,13 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-
-const bookSlice = createSlice({
-  name: 'bookSlice',
-  initialState: {
-    books: [],
-    filterBooks: [],
-    filter: false,
-  },
-  reducers: {
+const booksActions = () => {
+  const result = {
     createBook(state, action) {
       const newItem = action.payload;
       const existingItem = state.books.find((item) => item.id === newItem.id);
@@ -19,19 +11,19 @@ const bookSlice = createSlice({
     removeBook(state, action) {
       const id = action.payload;
       state.books = state.books.filter((item) => item.id !== id);
+      state.filterBooks = state.filterBooks.filter((item) => item.id !== id);
     },
     changeFilter(state, action) {
-      const category = action.payload;
-      if (category === 'All') {
-        state.filter = false;
-      } else {
+      state.filterVal = action.payload;
+      state.filterBooks = state.books.filter((item) => item.category === state.filterVal);
+      if (state.filterVal !== 'All') {
         state.filter = true;
+      } else {
+        state.filter = false;
       }
-      state.filterBooks = state.books.filter((item) => item.category === category);
     },
-  },
-});
+  };
+  return result;
+};
 
-export const bookSliceActions = bookSlice.actions;
-
-export default bookSlice;
+export default booksActions;
