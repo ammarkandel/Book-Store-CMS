@@ -1,0 +1,64 @@
+.book_card {
+  padding: 1rem;
+  border: 1px solid #rgba(0, 0, 0, 0.3);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book_card span {
+  font-size: 0.9rem;
+  color: #121212;
+}
+
+.actions_list button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #4386bf;
+}
+
+.actions_list li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.actions_list li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.completed div:first-child {
+  width: 80px;
+  height: 80px;
+  border: double 5px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(white, white), radial-gradient(circle at bottom, rgba(201, 201, 201, 0.4) 85%, #379cf6 15%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress p {
+  color: #121212;
+  font-size: 0.8rem;
+}
+
+.progress p:first-child {
+  margin-bottom: 0.8rem;
+}
+
+.progress button {
+  margin-top: 1.5rem;
+  width: 184px;
+  height: 33px;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  background-color: #379cf6;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

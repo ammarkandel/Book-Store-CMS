@@ -1,23 +1,31 @@
-.book_form {
-  padding: 2rem 2rem;
-}
-
 .form_section {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+}
+
+.book_form {
   display: flex;
-  justify-content: center;
-  background-color: white;
-  font-size: 1.1rem;
 }
 
-.inputs {
-  height: 1.2rem;
-  margin: 0.5rem;
+.input_title, .select {
+  width: 20rem;
+  height: 2rem;
 }
 
-.submit_btn {
-  margin-left: 1rem;
-  padding: 0.5rem;
+.book_form button {
+  margin-top: 1.2rem;
+  width: 184px;
+  height: 33px;
+  padding: 7px 19px 8px 22px;
+  border-radius: 3px;
+  background-color: #379cf6;
+  color: white;
+  border: none;
+  outline: none;
   cursor: pointer;
-  font-weight: 550;
+}
+
+@media (max-width: 992px) {
+  .book_form {
+    flex-direction: column;
+  }
 }

@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import Book from '../components/Book';
+import Book from '../components/Book/Book';
 import { bookSliceActions } from '../store/storeSlices/bookSlice';
 import CategoryFilter from '../components/CategoryFilter';
+import classes from './BooksList.module.css';
 
 const BooksList = () => {
   const filter = useSelector((state) => state.book.filter);
@@ -24,7 +25,7 @@ const BooksList = () => {
   return (
     <>
       <CategoryFilter changeHandler={categoryChangeHandler} />
-      <table>
+      <table className={classes.books_container}>
         <tbody>
           {booksData.map((item) => (
             <Book

@@ -28,19 +28,20 @@ const BooksForm = () => {
 
   return (
     <section className={classes.form_section}>
+      <h3>ADD NEW BOOK</h3>
       <form className={classes.book_form} onSubmit={submitBooksHandler}>
         <label htmlFor="title">
-          Title :
+          <p>Title :</p>
           <input
             type="text"
             onChange={titleChangeHandler}
-            className={classes.inputs}
+            className={classes.input_title}
           />
         </label>
         <label htmlFor="category">
-          Categroy :
+          <p>Categroy :</p>
           <select
-            className={classes.inputs}
+            className={classes.select}
             onChange={categoryChangeHandler}
           >
             {category.map((item) => (
@@ -53,7 +54,7 @@ const BooksForm = () => {
             ))}
           </select>
         </label>
-        <button type="submit" className={classes.submit_btn}>Submit</button>
+        <button type="submit">ADD BOOK</button>
       </form>
     </section>
   );
