@@ -1,6 +1,6 @@
 .book_card {
   padding: 1rem;
-  border: 1px solid #rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: white;
   display: flex;
   justify-content: space-between;

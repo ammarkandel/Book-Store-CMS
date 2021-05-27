@@ -6,7 +6,8 @@
   display: flex;
 }
 
-.input_title, .select {
+.input_title,
+.select {
   width: 20rem;
   height: 2rem;
 }
