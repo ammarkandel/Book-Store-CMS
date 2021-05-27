@@ -62,3 +62,9 @@
   outline: none;
   cursor: pointer;
 }
+
+@media (max-width: 992px) {
+  .book_card {
+    flex-direction: column;
+  }
+}

@@ -27,15 +27,17 @@ const BooksList = () => {
       <CategoryFilter changeHandler={categoryChangeHandler} />
       <table className={classes.books_container}>
         <tbody>
-          {booksData.map((item) => (
-            <Book
-              key={item.id}
-              title={item.title}
-              id={item.id}
-              category={item.category}
-              removeBook={removeBookHandler}
-            />
-          ))}
+          <tr>
+            {booksData.map((item) => (
+              <Book
+                key={item.id}
+                title={item.title}
+                id={item.id}
+                category={item.category}
+                removeBook={removeBookHandler}
+              />
+            ))}
+          </tr>
         </tbody>
       </table>
     </>
