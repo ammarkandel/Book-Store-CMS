@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import classes from './BooksForm.module.css';
-import { bookSliceActions } from '../store/storeSlices/bookSlice';
+import { bookSliceActions } from '../../store/storeSlices/bookSlice';
 
 export const category = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 

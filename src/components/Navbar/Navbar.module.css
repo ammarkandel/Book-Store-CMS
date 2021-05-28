@@ -6,19 +6,19 @@
   align-items: center;
 }
 
-h1 {
+.navbar h1 {
   color: #0290ff;
   font-size: 30px;
   margin-right: 2rem;
 }
 
-li {
+.nav_links li {
   color: #121212;
   font-size: 13px;
   display: inline-block;
 }
 
-li:last-child {
+.nav_links li:last-child {
   margin-left: 2rem;
 }
 

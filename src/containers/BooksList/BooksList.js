@@ -1,8 +1,7 @@
-/* eslint-disable */
 import { useSelector, useDispatch } from 'react-redux';
-import Book from '../components/Book/Book';
-import { bookSliceActions } from '../store/storeSlices/bookSlice';
-import CategoryFilter from '../components/CategoryFilter';
+import Book from '../../components/Book/Book';
+import { bookSliceActions } from '../../store/storeSlices/bookSlice';
+import CategoryFilter from '../../components/CategoryFilter/CategoryFilter';
 import classes from './BooksList.module.css';
 
 const BooksList = () => {

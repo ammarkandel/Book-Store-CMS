@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { category } from '../containers/BooksForm';
+import { category } from '../../containers/BooksForm/BooksForm';
 import classes from './CategoryFilter.module.css';
 
 const CategoryFilter = (props) => {
