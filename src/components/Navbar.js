@@ -2,8 +2,8 @@ import classes from './Navbar.module.css';
 
 const Navbar = () => (
   <nav className={classes.navbar}>
-    <h1 className={classes.logo}>Bookstore CMS</h1>
-    <ul className={classes.nav_links}>
+    <h1>Bookstore CMS</h1>
+    <ul>
       <li>BOOKS</li>
       <li>CATEGORIES</li>
     </ul>
