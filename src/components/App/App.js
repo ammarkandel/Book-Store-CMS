@@ -1,14 +1,13 @@
 import './App.css';
 import BooksForm from '../../containers/BooksForm/BooksForm';
 import BooksList from '../../containers/BooksList/BooksList';
-import Navbar from '../Navbar/Navbar';
+import Layout from '../Layout/Layout';
 
 const App = () => (
-  <>
-    <Navbar />
+  <Layout>
     <BooksList />
     <BooksForm />
-  </>
+  </Layout>
 );
 
 export default App;

@@ -20,11 +20,11 @@
 }
 
 .input_title {
-  width: 650px;
+  width: 750px;
 }
 
 .select {
-  width: 300px;
+  width: 250px;
 }
 
 .book_form button {
@@ -43,6 +43,6 @@
   }
 
   .input_title {
-    width: 300px;
+    width: 250px;
   }
 }
