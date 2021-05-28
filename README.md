@@ -10,7 +10,7 @@
 
 ![screenshot](https://cdn.jsdelivr.net/gh/ammarkandel/MY-CDN@latest/bookStore/screenshot.png)
 
-![screenshot](https://cdn.jsdelivr.net/gh/ammarkandel/MY-CDN@latest/bookStore/screenshot_1.png)
+![screenshot](https://cdn.jsdelivr.net/gh/ammarkandel/MY-CDN@latest/bookStore/screenshot_2.png)
 
 ### Users
 
