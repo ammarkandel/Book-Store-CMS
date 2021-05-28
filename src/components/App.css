@@ -14,3 +14,9 @@ body {
 fieldset {
   border: none;
 }
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import PropTypes from 'prop-types';
 import classes from './Book.module.css';
 
@@ -10,9 +11,9 @@ const Book = (props) => {
     <>
       <td className={classes.book_card}>
         <div>
-          <span>{category}</span>
-          <h1>{title}</h1>
-          <ul className={classes.actions_list}>
+          <p>{category}</p>
+          <h2>{title}</h2>
+          <ul>
             <li>
               <button type="button">Comments</button>
             </li>
@@ -24,13 +25,16 @@ const Book = (props) => {
             </li>
           </ul>
         </div>
-        <div className={classes.completed}>
-          <div>0%</div>
-          <span>Completed</span>
+        <div>
+          <div className={classes.oval}></div>
+          <p>
+            <span className={classes.percent}>0%</span>
+            <p>completed</p>
+          </p>
         </div>
-        <div className={classes.progress}>
+        <div className={classes.about_book}>
           <p>CURRENT CHAPTER</p>
-          <p>Introduction</p>
+          <h4>Introduction</h4>
           <button type="button">UPDATE PROGRESS</button>
         </div>
       </td>

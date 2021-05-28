@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useSelector, useDispatch } from 'react-redux';
 import Book from '../components/Book/Book';
 import { bookSliceActions } from '../store/storeSlices/bookSlice';
@@ -25,21 +26,23 @@ const BooksList = () => {
   return (
     <>
       <CategoryFilter changeHandler={categoryChangeHandler} />
-      <table className={classes.books_container}>
-        <tbody>
-          <tr>
-            {booksData.map((item) => (
-              <Book
-                key={item.id}
-                title={item.title}
-                id={item.id}
-                category={item.category}
-                removeBook={removeBookHandler}
-              />
-            ))}
-          </tr>
-        </tbody>
-      </table>
+      <div className={classes.list_container}>
+        <table>
+          <tbody>
+            <tr className={classes.books_list}>
+              {booksData.map((item) => (
+                <Book
+                  key={item.id}
+                  title={item.title}
+                  id={item.id}
+                  category={item.category}
+                  removeBook={removeBookHandler}
+                />
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </>
   );
 };
