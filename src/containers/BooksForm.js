@@ -31,15 +31,14 @@ const BooksForm = () => {
       <h3>ADD NEW BOOK</h3>
       <form className={classes.book_form} onSubmit={submitBooksHandler}>
         <label htmlFor="title">
-          <p>Title :</p>
           <input
             type="text"
             onChange={titleChangeHandler}
             className={classes.input_title}
+            placeholder="Book title"
           />
         </label>
         <label htmlFor="category">
-          <p>Categroy :</p>
           <select
             className={classes.select}
             onChange={categoryChangeHandler}
