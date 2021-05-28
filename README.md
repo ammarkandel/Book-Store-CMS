@@ -2,6 +2,22 @@
 
 ## Build book store using react and redux
 
+### Live version
+
+[live_version](https://book-store-cms.vercel.app/)
+
+### Screenshot
+
+![screenshot](https://cdn.jsdelivr.net/gh/ammarkandel/MY-CDN@latest/bookStore/screenshot.png)
+
+![screenshot](https://cdn.jsdelivr.net/gh/ammarkandel/MY-CDN@latest/bookStore/screenshot_2.png)
+
+### Users
+
+- Add book
+- Remove book
+- Filter books by category
+
 ### How to run this project
 
 - First: clone the repo `git clone git@github.com:ammarkandel/Book-Store-CMS.git` and open the folder `cd Book-Store-CMS`.

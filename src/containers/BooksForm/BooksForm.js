@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import classes from './BooksForm.module.css';
-import { bookSliceActions } from '../store/storeSlices/bookSlice';
+import { bookSliceActions } from '../../store/storeSlices/bookSlice';
 
 export const category = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -28,19 +28,19 @@ const BooksForm = () => {
 
   return (
     <section className={classes.form_section}>
+      <h3>ADD NEW BOOK</h3>
       <form className={classes.book_form} onSubmit={submitBooksHandler}>
         <label htmlFor="title">
-          Title :
           <input
             type="text"
             onChange={titleChangeHandler}
-            className={classes.inputs}
+            className={classes.input_title}
+            placeholder="Book title"
           />
         </label>
         <label htmlFor="category">
-          Categroy :
           <select
-            className={classes.inputs}
+            className={classes.select}
             onChange={categoryChangeHandler}
           >
             {category.map((item) => (
@@ -53,7 +53,7 @@ const BooksForm = () => {
             ))}
           </select>
         </label>
-        <button type="submit" className={classes.submit_btn}>Submit</button>
+        <button type="submit">ADD BOOK</button>
       </form>
     </section>
   );

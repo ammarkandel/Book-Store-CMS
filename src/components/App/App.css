@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgba(201, 194, 194, 0.4);
   font-family: 'Roboto', sans-serif;
@@ -7,4 +13,10 @@ body {
 
 fieldset {
   border: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
