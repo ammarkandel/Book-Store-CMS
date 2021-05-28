@@ -24,7 +24,7 @@
 }
 
 .select {
-  width: 340px;
+  width: 300px;
 }
 
 .book_form button {
@@ -43,6 +43,6 @@
   }
 
   .input_title {
-    width: 340px;
+    width: 300px;
   }
 }
